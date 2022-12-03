@@ -1,0 +1,40 @@
+
+
+CREATE TABLE CLIENTES(
+    NOMBRE TEXT (20),
+    APELLIDOS TEXT (100),
+    DNI TEXT (9),
+    DIRECCION TEXT (200),
+    NUM_SOCIO INTEGER (4)
+    NACIMIENTO DATETIME,
+    PUNTOS REAL (8,2),
+
+)
+
+----------------------------
+
+INSERT INTO CLIENTES
+VALUES(
+'Pedro', 
+'Gutierrez', 
+'45627896B', 
+'Casa del Pueblo nº 15', 
+4352,
+NULL,
+99.9)
+
+---------------------------
+
+INSERT INTO CLIENTES(NOMBRE, APELLIDOS)
+VALUES ('Antonio', 'Sánchez')
+
+--------------------------
+
+INSERT INTO CLIENTES(NOMBRE, APELLIDOS, 
+NUMERO_DE_SOCIO, NACIMIENTO)
+VALUES ('Héctor', 'Pascual', 3214, '1979-05-03')
+
+(NOTA: LA fecha es 3 de mayo de 1979, se escribe al revés)
+
+----------------------------------------------------
+

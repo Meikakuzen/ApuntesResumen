@@ -1,0 +1,47 @@
+
+CREATE TABLE COCHE(
+MODELO TEXT (20) PRIMARY KEY,
+MARCA TEXT (20),
+CILINDRADA TEXT (10)
+CONSUMO TEXT (15)
+
+-------
+
+INSERT INTO COCHE(MARCA, MODELO)
+VALUES('Seat', 'Ibiza 100')
+
+(Si pongo el mismo modelo me dará error ya que lo seteé como primary key)
+----
+
+(puedo poner 2 campos como primary key)
+
+CREATE TABLE MODELOS(
+MARCA TEXT (20),
+MODELO TEXT (30),
+CILINDRADA TEXT (10),
+CONSUMO TEXT (15),
+PRIMARY KEY(MARCA, MODELO)
+);
+
+----------------------------------
+INSERT INTO MODELOS(MARCA, MODELO)
+VALUES('Seat', 'Ibiza TDI.4')
+
+----------------------------------
+
+(SQLITE sólo permite añadir key al crear tablas)
+(En todo caso, un ejemplo de añadir un primary key después sería así¡)
+
+ALTER TABLE COCHES
+ADD PRIMARY KEY (MARCA)
+
+-----------------------
+
+(Tampoco permite quitarla. En todo caso, un ejemplo sería)
+
+ALTER TABLE COCHES
+DROP PRIMARY KEY
+
+------------------------
+
+

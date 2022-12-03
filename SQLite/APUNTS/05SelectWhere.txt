@@ -1,0 +1,68 @@
+SELECT * FROM CLIENTES
+WHERE NOMBRE ='Antonio'
+
+-----------------------
+
+SELECT NOMBRE
+FROM CLIENTES
+WHERE APELLIDOS = 'Gutierrez'
+
+-----------------------
+
+SELECT NOMBRE, PUNTOS
+FROM CLIENTES
+WHERE PUNTOS <100
+
+-------------------
+
+SELECT NOMBRE, NACIMIENTO
+FROM CLIENTES
+WHERE NACIMIENTO BETWEEN '1969-05-03' AND '1980-05-03'
+
+----------------------
+
+SELECT NOMBRE, APELLIDOS
+FROM CLIENTES
+WHERE NOMBRE IN ('Antonio','Laura')
+
+----------------------
+
+SELECT NOMBRE, NACIMIENTO
+FROM CLIENTES
+WHERE NOMBRE = 'Antonio'
+OR NACIMIENTO = '1979-05-03'
+
+----------------------
+
+SELECT NOMBRE, NACIMIENTO
+FROM CLIENTES
+WHERE NOMBRE = 'Antonio'
+AND NACIMIENTO IS NULL
+
+--------------------
+
+SELECT NOMBRE, PUNTOS
+FROM CLIENTES
+WHERE PUNTOS NOT BETWEEN 25 AND 98
+
+-------------------
+
+SELECT NOMBRE, NIF
+FROM CLIENTES
+WHERE NIF IS NOT NULL
+
+-----------------------------------
+
+SELECT NOMBRE
+FROM CLIENTES
+WHERE NOMBRE NOT IN ('Antonio', 'Laura')
+
+-------------------------------------
+
+SELECT NOMBRE
+FROM CLIENTES
+WHERE
+(NOMBRE !='Antonio' AND APELLIDOS !='Gutierrez') AND
+(APELLIDOS != 'Pascual' AND NIF!='92837654C')
+
+--------------------------------------

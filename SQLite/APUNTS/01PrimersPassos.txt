@@ -1,0 +1,64 @@
+CREATE TABLE USUARIOS(
+    USUARIOS TEXT,
+    EMAIL TEXT,
+    PASSWORD TEXT
+)
+
+----------------------------------
+
+INSERT INTO USUARIOS
+VALUES ('admin', 'admin@mail.com', 'password')
+
+----------------------------------
+
+SELECT * FROM USUARIOS
+WHERE ALIAS = 'admin'
+
+----------------------------------
+
+SELECT COUNT (1) FROM USUARIOS
+
+----------------------------------
+
+CREATE TABLE COCHES (MATRICULA TEXT)
+INSERT INTO COCHES VALUES('4765FG')
+SELECT * FROM COCHES
+
+----------------------------------
+
+DROP TABLE COCHES
+
+----------------------------------
+
+CREATE TABLE CLIENTES(
+    NOMBRE TEXT (20),
+    APELLIDOS TEXT (100),
+    DNI TEXT (9),
+    DIRECCION TEXT (200),
+    FECHA DATETIME,
+    DECIMALES REAL (8,2),
+    NUM_TLF INTEGER (9)
+)
+
+----------------------------------
+
+ALTER TABLE CLIENTES
+RENAME TO CLIENTE
+
+---------------------------------
+
+ALTER TABLE CLIENTE
+RENAME COLUMN DNI TO NIF
+
+----------------------------------
+
+ALTER TABLE CLIENTE
+ADD COLUMN PRODUCTO TEXT (50)
+
+---------------------------------
+
+ALTER TABLE CLIENTE
+DROP COLUMN DECIMALES
+
+---------------------------------
+
